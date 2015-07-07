@@ -52,16 +52,24 @@ var addEvent = (function(){
 // 作用3
 // 延迟计算
 var curryWeight = function(fn) {
+    // 存储参数的数组
     var _fishWeight = [];
     return function() {
         if (arguments.length === 0) {
+            // 只有参数个数为0才执行fn
             return fn.apply(null, _fishWeight);
         } else {
+            // 参数个数不为0，就把参数存起来
             _fishWeight = _fishWeight.concat([].slice.call(arguments));
         }
     }
 };
+
+// 存储总数的变量
 var fishWeight = 0;
+
+// 累加函数
+// 将所有传入的参数累加
 var addWeight = curryWeight(function() {
     var i=0; len = arguments.length;
     for (i; i<len; i+=1) {
