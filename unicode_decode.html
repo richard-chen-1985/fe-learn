@@ -1,0 +1,39 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+  <title> new document </title>
+</head>
+
+<style type="text/css">
+textarea {
+  width: 100%;
+  height: 45%;
+  font-family: "courier new";
+  background: #FFFACD;
+  border: 1p solid gray;
+  overflow: auto;
+  padding: 5px;
+}
+</style>
+
+<script type="text/javascript">
+window.$ = function(id) {
+  return typeof id == 'string' ? document.getElementById(id) : id;
+}
+
+function trans() {
+  var src = $('src').value;
+  src = src.replace(/\\[xu]([0-9a-fA-F]+)/g, function(a, b) {
+       return String.fromCharCode(parseInt(b, 16));
+    });
+  src = src.replace(/ {2,}/g, ' ');
+  $('dest').value = src;
+}
+</script>
+<body>
+  <textarea id="src"></textarea><br/>
+  <input type="button" value="转换" onclick="trans();"><br/>
+  <textarea id="dest" readonly></textarea>
+</body>
+</html>
