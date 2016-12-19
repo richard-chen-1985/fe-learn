@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="interface.js"></script>
+    <script>
+        var DynamicMap = new Interface('DynamicMap', ['centerOnPoint', 'zoom', 'draw'])
+
+        function displayRoute(mapInstance) {
+            Interface.ensureImplements(mapInstance, DynamicMap)
+            mapInstance.centerOnPoint(12, 34)
+            mapInstance.zoom(5)
+            mapInstance.draw()
+        }
+    </script>
+</body>
+</html>
