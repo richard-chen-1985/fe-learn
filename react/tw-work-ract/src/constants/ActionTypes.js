@@ -1,0 +1,9 @@
+export const INIT_USERINFO = 'INIT_USERINFO';
+export const INIT_AGENTS = 'INIT_AGENTS';
+export const INIT_HISTORY = 'INIT_HISTORY';
+
+export const DENY_AGENT = 'DENY_AGENT';
+export const ADD_RESOURCE_CLICK = 'ADD_RESOURCE_CLICK';
+export const ADD_RESOURCE = 'ADD_RESOURCE';
+export const DELETE_RESOURCE = 'DELETE_RESOURCE';
+export const ADD_AGENT = 'ADD_AGENT';
