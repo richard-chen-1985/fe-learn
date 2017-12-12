@@ -3,7 +3,7 @@ webpack template
 
 ### 修改列表
 
-#### webpack.dev.conf.js
+* webpack.dev.conf.js
 
 `devServer` 配置项可以接收一个 `after` 方法，用来做本地数据模拟
 
@@ -24,11 +24,11 @@ module.exports = function (app) {
 }
 ```
 
-#### webpack.prod.conf.js
+* webpack.prod.conf.js
 
 `HtmlWebpackPlugin` 的配置不需要将 `removeAttributeQuotes` 开启
 
-#### config/index.js
+* config/index.js
 
-- 静态资源的版本管理
-- proxyTable 的配置
+  - 静态资源的版本管理
+  - proxyTable 的配置
