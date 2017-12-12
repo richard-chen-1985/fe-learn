@@ -8,5 +8,6 @@
 - [面向切面编程](./js-senior-func/面向切面编程.js)
 
 ## [vue](./vue/readme.md)
+- [vue webpack template 的修改](./vue/vue-cli-webpack.md)
 
 ## [react](./react/readme.md)
