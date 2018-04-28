@@ -69,6 +69,10 @@ Range.prototype = {
   toString: function () { return "(" + this.from + "..." + this.to + ")" }
 }
 
+// 1. create a new object
+// 2. constructor scope to the new object(this is point to the new object)
+// 3. execute code in constructor(add property to the new object)
+// 4. return the new object
 var r = new Range(1, 3) // create a range object
 r.includes(2) // true
 r.foreach(console.log) // 1 2 3
@@ -77,7 +81,7 @@ console.log(r)
 // {
 //   from: 1,
 //   to: 3,
-//   __proto__: {
+//   __proto__: { // point to Range.prototype
 //     constructor: Range,
 //     foreach: f(),
 //     includes: f(),
@@ -85,4 +89,26 @@ console.log(r)
 //     __proto__: Object
 //   }
 // }
+```
+
+prototype's property will be shield if the instance has a same name property
+
+```js
+function Person() {}
+Person.prototype.name = 'Nicholas'
+Person.prototype.age = 29
+Person.prototype.job = 'Software Engineer'
+Person.prototype.sayName = function () {
+  alert(this.name)
+}
+
+var p1 = new Person()
+var p2 = new Person()
+
+p1.name = 'Greg'
+alert(p1.name) // 'Greg' from instance
+alert(p2.name) // 'Nicholas' from prototype
+
+delete p1.name
+alert(p1.name) // 'Nicholas' from prototype
 ```
