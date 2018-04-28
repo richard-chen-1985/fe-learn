@@ -59,7 +59,7 @@ console.log(o2)
 
 isPrototypeOf()
 
-Determine whether on object is the protytype of or is part of the prototype chain of another object
+Determine whether one object is the protytype of or is part of the prototype chain of another object
 
 ```js
 var p = { x: 1 }
