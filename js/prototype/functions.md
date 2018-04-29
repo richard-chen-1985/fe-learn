@@ -40,7 +40,7 @@ function checkScope() {
 checkScope()() // => 'local scope'
 ```
 
-Javascript functions are executed using the scope chain that was in effect(in effect means actually) when they are defined.
+Javascript functions are executed using the scope chain that was in effect(in effect means valid) when they are defined.
 
 The nested function `f()` was defined under a scope chain in which the variable `scope` was bound to the value "local scope".
 
