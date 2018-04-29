@@ -19,7 +19,7 @@ function SubType(name, age) {
 
 SubType.prototype = new SuperType()
 // SubType.prototype 成了 SuperType 的实例
-// 拥有了 SuperType 的属性
+// 拥有了 SuperType 的属性
 // 而其原型链有了 SuperType.prototype
 console.log(SubType.prototype)
 // {
@@ -44,7 +44,7 @@ ins2.sayName() // Greg
 ins2.sayAge() // 27
 ```
 
-缺点：要调用两次 SuperType 的构造函数才能实现继承，SubType.prototype 上还有并不需要的属性
+缺点：要调用两次 SuperType 的构造函数才能实现继承，SubType.prototype 上还有并不需要的属性
 
 ## 原型式继承
 
